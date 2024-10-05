@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PantallaPrincipal">
+
+    <!-- Barra de navegación con lenguajes de programación -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_700" />
+
+            <Button
+                android:id="@+id/btnCSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C#"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_700" />
+
+            <Button
+                android:id="@+id/btnJava"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_700" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Sección para mostrar publicaciones de errores de código -->
+    <LinearLayout
+        android:id="@+id/contenidoPublicaciones"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Aquí se cargarán las publicaciones -->
+        <TextView
+            android:id="@+id/tvNoPublicaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No hay publicaciones aún"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <!-- Botón flotante redondo para agregar publicaciones -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|bottom">
+
+        <Button
+            android:id="@+id/btnAgregarPublicacion"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="+"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:background="@drawable/fab_circle" /> <!-- Eliminar backgroundTint -->
+    </FrameLayout>
+</LinearLayout>
