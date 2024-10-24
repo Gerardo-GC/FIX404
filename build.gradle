@@ -1,4 +1,20 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-alias(libs.plugins.android.application) apply false
+// Archivo build.gradle en el nivel superior (proyecto)
+
+// Primero el bloque buildscript
+buildscript {
+    repositories {
+        google() // Repositorio de Google
+        mavenCentral() // Asegúrate de incluir Maven Central
+    }
+    dependencies {
+        // Agrega el plugin de Google Services
+        classpath 'com.google.gms:google-services:4.3.15' // Versión más reciente de google-services
+
+    }
 }
+
+// Luego el bloque plugins
+plugins {
+    alias(libs.plugins.android.application) apply false
+}
+

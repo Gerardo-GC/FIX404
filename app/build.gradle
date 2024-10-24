@@ -34,7 +34,17 @@ dependencies {
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
+    implementation libs.firebase.storage
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
+    // Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth:22.1.1'
+    // Dependencia de Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-database:20.3.0'
+    // Dependencia de Firebase Auth
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
 }
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FIX404</string>
+    <string-array name="lenguajes">
+        <item>PHP</item>
+        <item>Java</item>
+        <item>C#</item>
+    </string-array>
 </resources>
